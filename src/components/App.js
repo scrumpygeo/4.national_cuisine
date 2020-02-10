@@ -1,10 +1,16 @@
 import React from "react";
 import DishList from "./DishList";
+import DishOrigin from "./DishOrigin";
 
 const App = () => {
   return (
     <div>
-      <DishList />
+      <div>
+        <DishList />
+      </div>
+      <div>
+        <DishOrigin />
+      </div>
     </div>
   );
 };
