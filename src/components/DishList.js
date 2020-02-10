@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { selectDish } from "../actions";
 
 class DishList extends Component {
   renderList() {
@@ -27,4 +28,6 @@ const mapStateToProps = state => {
   return { dishes: state.dishes };
 };
 
-export default connect(mapStateToProps)(DishList);
+export default connect(mapStateToProps, {
+  selectDish: selectDish
+})(DishList);

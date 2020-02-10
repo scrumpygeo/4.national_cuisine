@@ -1,4 +1,4 @@
-export const selectDish = () => {
+export const selectDish = dish => {
   // return an action
   return {
     type: "DISH_SELECTED",
