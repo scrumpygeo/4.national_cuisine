@@ -10,7 +10,12 @@ class DishList extends Component {
         // React wants unique key so here just use name (dish)
         <div className="item" key={dish.dish}>
           <div className="right floated content">
-            <button className="ui green button">Discover</button>
+            <button
+              onClick={() => this.props.selectDish(dish)}
+              className="ui green button"
+            >
+              Discover
+            </button>
           </div>
           <div className="content">{dish.dish}</div>
         </div>
