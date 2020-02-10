@@ -5,7 +5,15 @@ class DishList extends Component {
   renderList() {
     // helper function to loop thru list and return jsx
     return this.props.dishes.map(dish => {
-      return <div key={dish.dish}>{dish.dish}</div>;
+      return (
+        // React wants unique key so here just use name (dish)
+        <div className="item" key={dish.dish}>
+          <div className="right floated content">
+            <button className="ui green button">Discover</button>
+          </div>
+          <div className="content">{dish.dish}</div>
+        </div>
+      );
     });
   }
 
