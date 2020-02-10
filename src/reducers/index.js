@@ -24,5 +24,5 @@ const selectedDishReducer = (selectedDish = null, action) => {
 
 export default combineReducers({
   dishes: dishesReducer,
-  selectedDish: selectedDish
+  selectedDish: selectedDishReducer
 });
