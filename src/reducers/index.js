@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 // Reducer 1 for list
 const dishesReducer = () => {
   // static array of objects - just for this exercise
@@ -12,10 +14,15 @@ const dishesReducer = () => {
 
 // Reducer 2 for selected dish
 const selectedDishReducer = (selectedDish = null, action) => {
-    if action.type === "DISH_SELECTED" {
-        return action.payload;
-    }
+  if (action.type === "DISH_SELECTED") {
+    return action.payload;
+  }
 
-    // otherwise not interested
-    return selectedDish;
-}
+  // otherwise not interested
+  return selectedDish;
+};
+
+export default combineReducers({
+  dishes: dishesReducer,
+  selectedDish: selectedDish
+});
