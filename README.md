@@ -6,5 +6,5 @@ Click on a dish and see what country of origin is.
 - App passes very little data to children directly but uses redux reducers and action creators.
 - one reducer produces a list of dishes while the other one will record what currently selected dish is.
 
-- Reducers: Dish List Reducer & Selected Dish Reducer
-- Action Creator: Select Dish
+- Reducers: dishesReducer & selectedDishReducer
+- Action Creator: selectDish
